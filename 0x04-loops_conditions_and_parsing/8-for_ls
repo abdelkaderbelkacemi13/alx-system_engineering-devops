@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+li=$(ls)
+for i in $li; do
+	echo "$i" | cut -d '-' -f2
+done
