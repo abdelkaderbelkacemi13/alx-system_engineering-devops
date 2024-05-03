@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#6. Superstitious numbers
 n=1
 while [ $n -le 20 ]
 do

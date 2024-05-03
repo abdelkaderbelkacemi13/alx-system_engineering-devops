@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#8. For ls
 li=$(ls)
 for i in $li; do
 	echo "$i" | cut -d '-' -f2

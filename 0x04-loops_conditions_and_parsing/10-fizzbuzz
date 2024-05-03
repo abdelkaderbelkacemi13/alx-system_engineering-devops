@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#10. FizzBuzz
 for number in {1..100}
 do
 	if (( number % 3 == 0 ))
