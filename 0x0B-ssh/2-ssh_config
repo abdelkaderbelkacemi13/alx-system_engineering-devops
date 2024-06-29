@@ -1,0 +1,6 @@
+#an SSH configuration file for the local SSH client
+#configure it to our needs so that you can connect to a server without typing a password
+
+Host *
+	PasswordAuthentication no
+	IdentifyFile ~/.ssh/school
