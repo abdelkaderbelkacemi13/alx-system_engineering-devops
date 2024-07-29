@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a python script that uses an API to display 
+"""a python script that uses an API to display
     information about employees usen ID
 """
 import requests
