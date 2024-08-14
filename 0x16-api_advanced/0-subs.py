@@ -15,12 +15,8 @@ def number_of_subscribers(subreddit):
         "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
     }
     # Make a GET request to the Reddit API
-    http_response = requests.get(
-<<<<<<< HEAD
-        given_apiurl, headers=headers, allow_redirects=False)
-=======
-            given_apiurl, headers=headers, allow_redirects=False)
->>>>>>> db2b0d5ed8c30c116994466422f2ca4ebf363d07
+    http_response = requests.get(given_apiurl, headers=headers, allow_redirects=False)
+
     # Check if the subreddit exist or not.
     if http_response.status_code == 404:
         return 0
