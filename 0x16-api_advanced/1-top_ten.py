@@ -25,7 +25,7 @@ def top_ten(subreddit):
             params=request_param, allow_redirects=False
     )
     # Check if the subreddit exist or not.
-    if http_response.status_code == 404:
+    if http_response.status_code != 200:
         print("None")
         return
     result = http_response.json().get("data")
