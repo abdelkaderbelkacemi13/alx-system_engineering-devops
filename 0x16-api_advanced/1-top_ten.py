@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This Python script prints the titles of the 
+"""This Python script prints the titles of the
     top 10 hot posts from a specified subreddit."""
 import requests
 
@@ -21,8 +21,9 @@ def top_ten(subreddit):
     }
     # Make a GET request to the Reddit API
     http_response = requests.get(
-        given_apiurl, headers=headers, params=request_param, 
-        allow_redirects=False)
+            given_apiurl, headers=headers,
+            params=request_param, allow_redirects=False
+    )
     # Check if the subreddit exist or not.
     if http_response.status_code == 404:
         print("None")
