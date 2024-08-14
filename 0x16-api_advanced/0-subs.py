@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""This function queries the Reddit API 
+"""This function queries the Reddit API
     and returns the number of subscribers"""
 import requests
 
 
 def number_of_subscribers(subreddit):
     """
-    number_of_subscribers returns the total number of subscribers 
+    number_of_subscribers returns the total number of subscribers
     """
     # Construct the URL for the Reddit API
     given_apiurl = "https://www.reddit.com/r/{}/about.json".format(subreddit)
@@ -16,7 +16,11 @@ def number_of_subscribers(subreddit):
     }
     # Make a GET request to the Reddit API
     http_response = requests.get(
+<<<<<<< HEAD
         given_apiurl, headers=headers, allow_redirects=False)
+=======
+            given_apiurl, headers=headers, allow_redirects=False)
+>>>>>>> db2b0d5ed8c30c116994466422f2ca4ebf363d07
     # Check if the subreddit exist or not.
     if http_response.status_code == 404:
         return 0
