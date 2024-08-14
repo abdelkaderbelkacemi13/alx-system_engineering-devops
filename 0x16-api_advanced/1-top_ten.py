@@ -21,11 +21,13 @@ def top_ten(subreddit):
     }
     # Make a GET request to the Reddit API
     http_response = requests.get(
-            given_apiurl, headers=headers,
-            params=request_param, allow_redirects=False
+            given_apiurl,
+            headers=headers,
+            params=request_param,
+            allow_redirects=False
     )
     # Check if the subreddit exist or not.
-    if http_response.status_code != 200:
+    if http_response.status_code == 404:
         print("None")
         return
     result = http_response.json().get("data")
