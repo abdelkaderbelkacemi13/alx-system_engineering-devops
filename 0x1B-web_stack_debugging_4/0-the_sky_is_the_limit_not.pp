@@ -11,6 +11,7 @@ exec { 'fix-nginx':
 #'nginx-restart' restarts the Nginx service
 
 exec { 'nginx-restart':
-  command => 'sudo service nginx restart',
-  require => Exec['fix-nginx'],
+  provider => shell,
+  command  => 'sudo service nginx restart',
+  require  => Exec['fix-nginx'],
 }
